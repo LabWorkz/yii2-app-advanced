@@ -1,0 +1,98 @@
+2016-04-08 22:10:33 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#3 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#4 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#6 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#17 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Users/gary/Development/Yii2/yii2-app-advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#1 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#2 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#4 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#15 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 /Users/gary/Development/Yii2/yii2-app-advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Users/gary/Development/Yii2/yii2-app-advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-04-08 22:10:33 [-][-][-][info][application] $_SERVER = [
+    'rvm_bin_path' => '/Users/gary/.rvm/bin'
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'GEM_HOME' => '/Users/gary/.rvm/gems/ruby-2.2.3'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'IRBRC' => '/Users/gary/.rvm/rubies/ruby-2.2.3/.irbrc'
+    'TMPDIR' => '/var/folders/t8/kzpsn0x5183cdkxqlh2hpcbh0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.kLUzmP4yf7/Render'
+    'TERM_PROGRAM_VERSION' => '361.1'
+    'OLDPWD' => '/Users/gary/Development/Yii2'
+    'MY_RUBY_HOME' => '/Users/gary/.rvm/rubies/ruby-2.2.3'
+    'TERM_SESSION_ID' => '52381620-2FC4-4375-8A08-8DA9E1A42C7D'
+    'USER' => 'gary'
+    '_system_type' => 'Darwin'
+    'rvm_path' => '/Users/gary/.rvm'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.mrspm4yqcp/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'rvm_prefix' => '/Users/gary'
+    'PATH' => '/opt/local/bin:/opt/local/sbin:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.5.26/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/bin:/Users/gary/.rvm/gems/ruby-2.2.3/bin:/Users/gary/.rvm/gems/ruby-2.2.3@global/bin:/Users/gary/.rvm/rubies/ruby-2.2.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/ImageMagick/bin:/Users/gary/.rvm/biniiii:/Users/gary/.rvm/bin'
+    'PWD' => '/Users/gary/Development/Yii2/yii2-app-advanced'
+    'LANG' => 'en_US.UTF-8'
+    '_system_arch' => 'x86_64'
+    'XPC_FLAGS' => '0x0'
+    '_system_version' => '10.11'
+    'XPC_SERVICE_NAME' => '0'
+    'rvm_version' => '1.26.11 (latest)'
+    'SHLVL' => '1'
+    'HOME' => '/Users/gary'
+    'LOGNAME' => 'gary'
+    'GEM_PATH' => '/Users/gary/.rvm/gems/ruby-2.2.3:/Users/gary/.rvm/gems/ruby-2.2.3@global'
+    'RUBY_VERSION' => 'ruby-2.2.3'
+    '_system_name' => 'OSX'
+    '_' => '/Applications/MAMP/bin/php/php5.5.26/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1460146233.31
+    'REQUEST_TIME' => 1460146233
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
